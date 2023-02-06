@@ -1,0 +1,86 @@
+/* generic */
+*,
+*:before,
+*:after {
+	box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: Arial;
+  background-color: #f2f2f2;
+}
+
+.app-layout {
+	display: grid;
+	height: 100vh;
+	grid-template-columns: 100px 250px 1fr;
+	grid-template-rows: auto 1fr auto;
+	grid-template-areas: "teams channels header" "teams channels messages" "teams channels input";
+}
+/* end generic */
+
+.box {
+	color: #fff;
+	padding: 1em;
+	background-color: #f2f2f2;
+}
+
+input {
+	width: 100%;
+	padding: 1em;
+	outline: none;
+	border: 1px solid #f2f2f2;
+}
+
+.message-list {
+	margin: 0;
+	padding: 0;
+}
+
+.message-list li {
+  padding: .2em;
+  margin-top: 1em;
+  margin-bottom: 1em;
+  background-color: #f2f2f2;
+}
+
+.teams {
+	/* grid-column: 1;
+	grid-row: 1/4; */
+
+	grid-area: teams;
+	background-color: #362233;
+}
+
+.channels {
+/* 	grid-column: 2;
+	grid-row: 1/4; */
+
+	grid-area: channels;
+	background-color: #52364E;
+}
+
+.header {
+	/* grid-column: 3;
+	grid-row: 1; */
+
+	grid-area: header;
+	background-color: #ffffff;
+}
+
+.messages {
+	/* grid-column: 3;
+	grid-row: 2; */
+
+	grid-area: messages;
+	background-color: #ffffff;
+}
+
+.input {
+	/* grid-column: 3;
+	grid-row: 3; */
+
+	grid-area: input;
+	background-color: #f2f2f2;
+}

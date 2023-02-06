@@ -1,0 +1,88 @@
+/* generic */
+body {
+	margin: 0;
+	font-family: Arial;
+	background-color: #f2f2f2;
+}
+
+.box {
+	color: #fff;
+	padding: 1em;
+	text-align: center;
+	background-color: #efefef;
+}
+
+.tweets   { background-color: #A2DED0; }
+.replies  { background-color: #F4D03F; }
+.search   { background-color: #6C7A89; }
+.messages { background-color: #59ABE3; }
+
+/* end generic */
+
+/* grid code */
+
+/* 4 column layout */
+.app-layout {
+	display: grid;
+	grid-template-columns: repeat(4, 1fr);
+	grid-template-rows: 100vh;
+
+	/* naming areas */
+	grid-template-areas: "search replies messages tweets";
+}
+
+/* order box */
+.search {
+/* 	grid-column-start: 1;
+	grid-column-end: 2; */
+
+	/* shorthand properties */
+/* 	grid-column: 1/2;
+
+	grid-row: 1; */
+
+	grid-area: replies;
+}
+
+.replies {
+	/* grid-column-start: 2;
+	grid-column-end: 3; */
+
+	/* shorthand properties */
+	/* grid-column: 2/3;
+
+	grid-row: 1; */
+	grid-area: search;
+}
+
+.messages {
+/* 	grid-column-start: 3;
+	grid-column-end: 4; */
+
+	/* shorthand properties */
+/* 	grid-column: 3/4;
+
+	grid-row: 1; */
+	grid-area: messages;
+}
+
+.tweets {
+	/* grid-column-start: 4;
+	grid-column-end: 5; */
+
+	/* shorthand properties */
+	/* 	grid-column: 4/5;
+
+		grid-row: 1; */
+	grid-area: tweets;
+
+}
+
+/* 2 column layout */
+@media screen and (max-width: 1024px) {
+	.app-layout {
+		display: grid;
+		grid-template-columns: repeat(2, 1fr);
+		grid-template-rows: 50vh 50vh;
+	}
+}
